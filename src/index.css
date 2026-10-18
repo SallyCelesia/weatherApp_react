@@ -53,22 +53,9 @@ a { color: inherit; text-decoration: none; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 4px;
   font: 800 24px/1 "Manrope", sans-serif;
   letter-spacing: -1.4px;
-}
-
-.brand-mark {
-  display: grid;
-  width: 39px;
-  height: 39px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.38);
-  border-radius: 14px;
-  background: rgba(226, 244, 235, 0.17);
-  color: #d3f4dc;
-  font-size: 26px;
-  box-shadow: inset 3px 3px 8px rgba(255, 255, 255, 0.17), 5px 6px 14px rgba(0, 0, 0, 0.16);
 }
 
 .brand-period { color: #c6f0db; }
@@ -118,10 +105,12 @@ a { color: inherit; text-decoration: none; }
   outline: 0;
   background: transparent;
   color: white;
-  font-size: 13px;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
-.search-input-wrap input::placeholder { color: #cfdae5; }
+.search-input-wrap input::placeholder { color: #cfdae5; font-size: 13px;
+  letter-spacing: 0.5px;}
 .search-input-wrap input::-webkit-search-cancel-button { filter: grayscale(1) brightness(3); }
 
 .search-button {
@@ -262,14 +251,15 @@ a { color: inherit; text-decoration: none; }
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
   color: rgba(255, 255, 255, 0.83);
-  font-size: 10px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
 }
 
 .panel { border-radius: 21px; background: var(--glass); }
 .conditions-panel { padding: 22px; }
 .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .section-heading .eyebrow { margin-bottom: 5px; }
-.section-heading h2 { margin: 0; font: 700 18px/1.3 "Manrope", sans-serif; letter-spacing: -0.45px; }
+.section-heading h2 { margin: 0; font: 700 20px/1.3 "Manrope", sans-serif; letter-spacing: -0.45px; }
 .conditions-orbit { color: #d2f2da; font-size: 20px; }
 
 .conditions-grid {
@@ -299,26 +289,13 @@ a { color: inherit; text-decoration: none; }
   place-items: center;
   border-radius: 10px;
   background: rgba(225, 239, 229, 0.15);
-  font-size: 16px;
+  font-size: 18px;
 }
 
-.condition-card p { margin: 0 0 2px; color: #c4d0de; font-size: 10px; }
+.condition-card p { margin: 0 0 2px; color: #c4d0de; font-size: 14px; }
 .condition-card strong { display: block; font: 700 17px/1.25 "Manrope", sans-serif; }
-.condition-note { display: block; margin-top: 2px; color: #afbdcc; font-size: 9px; }
+.condition-note { display: block; margin-top: 2px; color: #afbdcc; font-size: 12px; }
 
-.pressure-note {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 14px;
-  padding: 11px 2px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: #c2cfdd;
-  font-size: 10px;
-}
-
-.pressure-note > span { color: #d4f0db; font-size: 14px; }
-.pressure-note strong { margin-left: auto; color: white; font-size: 11px; }
 .forecast-panel, .weekly-panel { margin-top: 17px; padding: 22px 23px; }
 
 .text-button {
@@ -334,7 +311,7 @@ a { color: inherit; text-decoration: none; }
 
 .hourly-list {
   display: grid;
-  grid-auto-columns: minmax(90px, 1fr);
+  grid-auto-columns: minmax(100px, 1fr);
   grid-auto-flow: column;
   gap: 10px;
   margin-top: 18px;
@@ -357,12 +334,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hourly-item.is-now { border-color: rgba(208, 240, 216, 0.34); background: rgba(198, 240, 219, 0.13); }
-.hour-time { color: #c4d0dc; font-size: 10px; }
+.hour-time { color: #c4d0dc; font-size: 13px; }
 .hour-icon { font-size: 23px; line-height: 1.3; }
 .hourly-item > strong { font: 700 20px/1 "Manrope", sans-serif; }
-.hour-rain, .hour-wind { color: #c0cdda; font-size: 9px; white-space: nowrap; }
+.hour-rain, .hour-wind { color: #c0cdda; font-size: 12px; white-space: nowrap; }
 .hour-rain { color: #cde5f2; }
-.forecast-caption { color: #bac8d6; font-size: 10px; }
+.forecast-caption { color: #bac8d6; font-size: 13px; }
 
 .daily-list { margin-top: 14px; }
 
@@ -377,9 +354,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .daily-row:last-child { border-bottom: 0; }
-.daily-day { font-size: 11px; font-weight: 600; }
-.daily-icon { font-size: 20px; }
-.daily-condition, .daily-precip { color: #c0ccda; font-size: 10px; }
+.daily-day { font-size: 15px; font-weight: 600; }
+.daily-icon { font-size: 22px; }
+.daily-condition, .daily-precip { color: #c0ccda; font-size: 14px; }
 .daily-precip { white-space: nowrap; }
 
 .daily-range {
@@ -414,7 +391,7 @@ a { color: inherit; text-decoration: none; }
 .welcome-icon { margin-bottom: 17px; font-size: 52px; filter: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.19)); animation: float 4s ease-in-out infinite; }
 .welcome-panel .eyebrow { margin-bottom: 11px; }
 .welcome-panel h1 { font-size: clamp(37px, 6vw, 57px); }
-.welcome-panel > p { max-width: 410px; margin: 15px 0 0; color: #c5d1dc; font-size: 13px; line-height: 1.7; }
+.welcome-panel > p { max-width: 410px; margin: 15px 0 0; color: #c5d1dc; font-size: 16px; line-height: 1.7; }
 
 .welcome-categories { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 24px; }
 
@@ -424,7 +401,8 @@ a { color: inherit; text-decoration: none; }
   border-radius: 20px;
   background: rgba(238, 246, 255, 0.09);
   color: #e0e8f0;
-  font-size: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.06), 3px 4px 9px rgba(0, 0, 0, 0.1);
 }
 
@@ -449,16 +427,11 @@ a { color: inherit; text-decoration: none; }
 .error-notice > span { display: grid; width: 19px; height: 19px; place-items: center; border-radius: 50%; background: rgba(255, 220, 216, 0.2); font-weight: 700; }
 
 .page-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
+  text-align: center;
   padding: 22px 3px 25px;
   color: rgba(224, 232, 240, 0.68);
-  font-size: 9px;
+  font-size: 12px;
 }
-
-.page-footer span:first-child { letter-spacing: 0.13em; }
-.page-footer span:first-child span { margin-left: 5px; color: #d5f0dc; }
 
 @media (max-width: 760px) {
   .weather-app { padding: 0 18px; background-attachment: scroll; }
@@ -476,11 +449,10 @@ a { color: inherit; text-decoration: none; }
   .weather-app { padding: 0 13px; }
   .page-header { gap: 11px; }
   .brand { gap: 8px; font-size: 21px; }
-  .brand-mark { width: 35px; height: 35px; }
-  .search-form { width: calc(100% - 130px); height: 43px; }
+  .search-form { width: 100%; height: 43px; margin-top:8px}
   .search-button { min-width: 67px; padding: 0 9px; font-size: 10px; }
   .search-input-wrap { gap: 5px; padding: 0 4px; }
-  .search-input-wrap input { font-size: 11px; }
+  .search-input-wrap input { font-size: 13px; }
   .dashboard-heading h1 { font-size: 29px; }
   .dashboard-heading > p { font-size: 11px; }
   .current-card { min-height: 255px; padding: 22px 20px 17px; }

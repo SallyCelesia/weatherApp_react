@@ -184,7 +184,7 @@ function WeeklyForecast({ daily, units }) {
       <div className="section-heading">
         <div>
           <span className="eyebrow">LOOKING AHEAD</span>
-          <h2>7-day forecast</h2>
+          <h2>7-days forecast</h2>
         </div>
         <span className="forecast-caption">Your week, at a glance</span>
       </div>
@@ -276,11 +276,11 @@ export default function App() {
     <main className="weather-app">
       <div className="page-shell">
         <header className="page-header">
-          <a className="brand" href="#" aria-label="Atmos home">
-            <span className="brand-mark" aria-hidden="true">☼</span>
-            <span>atmos<span className="brand-period">.</span></span>
+          <a className="brand" href="#" aria-label="skycast home">
+            <span class="logo" style={{letterSpacing:"1.5px"}}>Skycast</span>
+            <span className="brand-mark" aria-hidden="true">⛅</span>
           </a>
-          <div className="header-note"><span className="header-sparkle">✦</span> A little closer to the sky</div>
+          {/* <div className="header-note"><span className="header-sparkle">✦</span></div> */}
           <SearchBar
             cityInput={cityInput}
             setCityInput={setCityInput}
@@ -295,13 +295,14 @@ export default function App() {
           <>
             <div className="dashboard-heading">
               <div>
-                <span className="eyebrow">YOUR PERSONAL FORECAST</span>
-                <h1>Weather, made <em>beautiful.</em></h1>
+                <span className="eyebrow">SEARCHED WEATHER FORCAST OF THE LOCATION</span>
+                <h1>Know your <em>weather.</em></h1>
               </div>
               <p>Live conditions for <strong>{location.name}</strong></p>
             </div>
             <section className="overview-grid">
               <CurrentWeatherCard location={location} current={current} units={units} />
+              {console.log(current)}
               <section className="panel conditions-panel">
                 <div className="section-heading">
                   <div>
@@ -336,11 +337,7 @@ export default function App() {
                     note="Currently falling"
                   />
                 </div>
-                <div className="pressure-note">
-                  <span aria-hidden="true">◉</span>
-                  Surface pressure
-                  <strong>{current.surface_pressure} {units.surface_pressure}</strong>
-                </div>
+
               </section>
             </section>
 
@@ -356,9 +353,8 @@ export default function App() {
             <div className="welcome-orbit orbit-one" />
             <div className="welcome-orbit orbit-two" />
             <span className="welcome-icon" aria-hidden="true">🌤️</span>
-            <span className="eyebrow">A CLEARER VIEW OF YOUR DAY</span>
-            <h1>Find your kind<br />of <em>weather.</em></h1>
-            <p>Search any city to see the forecast, hourly outlook, and the little details that help you plan ahead.</p>
+            <h1> A clearer view of <em> your day.</em></h1>
+            <p> Search any city to see the forecast, hourly outlook, and the little details that help you plan ahead.</p>
             <div className="welcome-categories" aria-label="Weather categories">
               <span>☀️ Clear</span><span>☁️ Cloudy</span><span>🌧️ Rain</span><span>❄️ Snow</span><span>⛈️ Storm</span>
             </div>
@@ -366,7 +362,7 @@ export default function App() {
         )}
 
         <footer className="page-footer">
-          <span>MADE FOR THE MOMENT <span aria-hidden="true">✦</span></span>
+          {/* <span>MADE FOR THE MOMENT <span aria-hidden="true">✦</span></span> */}
           <span>Weather data by Open-Meteo</span>
         </footer>
       </div>
